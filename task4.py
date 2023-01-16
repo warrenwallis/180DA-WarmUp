@@ -5,33 +5,6 @@ import time
 
 # possible color choices: cv.COLOR_BGR2GRAY, cv.COLOR_BGR2HSV, cv.COLOR_BGR2RGB
 
-def task4_1(color_chosen = cv.COLOR_BGR2RGB):
-    cap = cv.VideoCapture(0)
-    counter = 0
-
-    while(True):
-        # Capture frame-by-frame
-        ret, frame = cap.read()
-
-        # Our operations on the frame come here
-        color = cv.cvtColor(frame, color_chosen)
-
-        # thresholding
-        ret,thresh1 = cv.threshold(color,counter,255,cv.THRESH_BINARY_INV)
-
-        # Display the resulting frame
-        #cv.imshow('frame', color)
-        plt.title(counter)
-        plt.imshow(thresh1, 'gray', vmin=0, vmax=255)
-        plt.show()
-        counter += 15
-        if (cv.waitKey(1) & 0xFF == ord('q')) or counter >= 255:
-            break
-
-    # When everything done, release the capture
-    cap.release()
-    cv.destroyAllWindows()
-
 def task4_11():
     cap = cv.VideoCapture(0)
     while(1):
