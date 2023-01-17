@@ -5,7 +5,7 @@ import time
 
 # possible color choices: cv.COLOR_BGR2GRAY, cv.COLOR_BGR2HSV, cv.COLOR_BGR2RGB
 
-def task4_11():
+def task4_1():
     cap = cv.VideoCapture(0)
     while(1):
         # Take each frame
@@ -29,7 +29,7 @@ def task4_11():
     cv.destroyAllWindows()
 
 def main():
-    task4_11()
+    task4_1()
 
 
 if __name__ == '__main__':
