@@ -77,24 +77,27 @@ def task4_4():
     cap = cv.VideoCapture(0)
     x_start, x_end, y_start, y_end = 850, 1050, 450, 650
     start_point, end_point, thickness = (x_start, y_start), (x_end, y_end), 4
+    red, green, blue = 0, 0, 0
     while(1):
         # Take each frame
         _, frame = cap.read()
 
         # Convert BGR to wanted color
         converted_frame = cv.cvtColor(frame, cv.COLOR_BGR2RGB)
-        cv.rectangle(frame, start_point, end_point, (0,255,0), 2)
+        cv.rectangle(frame, start_point, end_point, (red, green, blue), 2)
+        crop_frame = converted_frame[y_start:y_end, x_start:x_end]
         # reshape image
-        reshaped_frame = converted_frame.reshape((frame.shape[0]*frame.shape[1],3))
+        #reshaped_frame = converted_frame.reshape((frame.shape[0]*frame.shape[1],3))
+        reshaped_frame = crop_frame.reshape((crop_frame.shape[0]*crop_frame.shape[1],3))
 
         # create ML algorithm
-        # clt = KMeans(n_clusters=3)
-        # clt.fit(reshaped_frame)
+        clt = KMeans(n_clusters=3)
+        clt.fit(reshaped_frame)
 
         cv.imshow('frame', frame)
-        crop_frame = frame[y_start:y_end, x_start:x_end]
         cv.imshow('crop', crop_frame)
-        # hist = find_histogram(clt)
+        hist = find_histogram(clt)
+        print(hist)
         # bar = plot_colors2(hist, clt.cluster_centers_)
         # plt.axis("off")
         # plt.imshow(bar)
