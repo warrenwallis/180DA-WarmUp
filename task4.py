@@ -91,17 +91,19 @@ def task4_4():
         reshaped_frame = crop_frame.reshape((crop_frame.shape[0]*crop_frame.shape[1],3))
 
         # create ML algorithm
-        clt = KMeans(n_clusters=3)
+        clt = KMeans(n_clusters=1)
         clt.fit(reshaped_frame)
 
         cv.imshow('frame', frame)
         cv.imshow('crop', crop_frame)
         hist = find_histogram(clt)
-        print(hist)
-        # bar = plot_colors2(hist, clt.cluster_centers_)
-        # plt.axis("off")
-        # plt.imshow(bar)
-        # plt.show()
+        bar = plot_colors2(hist, clt.cluster_centers_)
+
+        # clt.cluster_centers_[0] should be our color
+        
+        plt.axis("off")
+        plt.imshow(bar)
+        plt.show()
 
         k = cv.waitKey(5) & 0xFF
         if k == 27:
@@ -109,7 +111,7 @@ def task4_4():
     cv.destroyAllWindows()
 
 def main():
-    task4_4()
+    task4_1()
 
 
 if __name__ == '__main__':
