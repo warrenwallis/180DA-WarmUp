@@ -1,3 +1,12 @@
+'''
+This code below utilizes code from the following sources:
+    - opencv
+    - https://code.likeagirl.io/finding-dominant-colour-on-an-image-b4e075f98097
+        - changed number of clusters
+'''
+
+
+
 import numpy as np
 import cv2 as cv
 from matplotlib import pyplot as plt
@@ -111,7 +120,7 @@ def task4_4():
     cv.destroyAllWindows()
 
 def main():
-    task4_1()
+    task4_4()
 
 
 if __name__ == '__main__':
