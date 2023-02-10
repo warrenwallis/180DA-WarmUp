@@ -39,7 +39,16 @@ As mentioned earlier, a network using CAN only needs two wires to operate:
 
 *insert image here*
 
-This significantly reduces the wires needed to connect the network, and is why it was and still is popular in the automobile industry. The motivation behind the CAN protocol was to reduce costs by reducing the use of copper wire
+This significantly reduces the wires needed to connect the network, and is why it was and still is popular in the automobile industry. The motivation behind the CAN protocol was to reduce costs by reducing the use of copper wire:
+
+*insert image here*
+
+We can break down a node into three parts:
+#### Microprocessor
+
+2. CAN controller
+3. Transceiver
+
 
 ### Software Principles
 
