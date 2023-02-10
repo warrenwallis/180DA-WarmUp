@@ -8,7 +8,7 @@ You CAN do this!
 
 ## What is CAN
 
-Controller Area Network or CAN is a network technology primarily used in embedded systems that provide fast communication amongst microcontrollers while being cost-effective. Notably, a network can function as a series of nodes and operate without a host computer [1](https://github.com/warrenwallis/180DA-WarmUp/blob/main/misc/wiki-article-first-draft.md#sealing-this-can-post). 
+Controller Area Network or CAN is a network technology primarily used in embedded systems that provide fast communication amongst microcontrollers while being cost-effective. Notably, a network can function as a series of nodes and operate without a host computer [[1](https://github.com/warrenwallis/180DA-WarmUp/blob/main/misc/wiki-article-first-draft.md#sealing-this-can-post)]. 
 
 *Ok, but what does that mean!?* It means that there isn't a central computer delegating tasks and controlling how messages are sent or received. Like some cryptocurrencies, a CAN bus is a decentralized network that is able to send messages efficiently across its network.
 
@@ -47,5 +47,5 @@ This significantly reduces the wires needed to connect the network, and is why i
 
 ## Links
 
-[1](https://en.m.wikipedia.org/wiki/CAN_bus) Wikipedia
+[[1](https://en.m.wikipedia.org/wiki/CAN_bus) Wikipedia]
 
