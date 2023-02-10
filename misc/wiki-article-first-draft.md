@@ -47,5 +47,5 @@ This significantly reduces the wires needed to connect the network, and is why i
 
 ## Links
 
-[[1](https://en.m.wikipedia.org/wiki/CAN_bus) Wikipedia]
+[[1: Wikipedia](https://en.m.wikipedia.org/wiki/CAN_bus)]
 
