@@ -13,6 +13,7 @@ Controller Area Network or CAN is a network technology primarily used in embedde
 *Ok, but what does that mean!?* It means that there isn't a central computer delegating tasks and controlling how messages are sent or received. Like some cryptocurrencies, a CAN bus is a decentralized network that is able to send messages efficiently across its network.
 
 Some characteristics of CAN:
+- ~~preserving foods~~
 - needs only two wires to communicate
 - operates at data rates up to 1 Mb/s
 - supports a max of 8 Bytes per message frame
@@ -26,15 +27,24 @@ Some industries of where CAN is used:
 - elevators and escalators (where I use it for my job :nail_care:)
 
 Similar technologies to CAN:
-- ethernet (expensive :thumbsdown:)
+- ~~electric can-opener~~
+- ethernet w/ TCP/IP (expensive :thumbsdown:)
 - FPD-link
 
-## Digging Deeper into the :canned_food:
+## Digging Deeper into :canned_food:
 
 ### Hardware Principles
 
+As mentioned earlier, a network using CAN only needs two wires to operate:
 
+*insert image here*
+
+This significantly reduces the wires needed to connect the network, and is why it was and still is popular in the automobile industry. The motivation behind the CAN protocol was to reduce costs by reducing the use of copper wire
 
 ### Software Principles
 
 ## Sealing this CAN Post
+
+## Links
+
+[1] (https://en.m.wikipedia.org/wiki/CAN_bus)
