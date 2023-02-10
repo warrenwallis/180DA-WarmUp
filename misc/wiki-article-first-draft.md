@@ -29,9 +29,7 @@ Similar technologies to CAN:
 - ethernet (expensive :thumbsdown:)
 - FPD-link
 
-## Digging Deeper into this CAN of Worms
-
-So, you've made it this far. Keep going beca
+## Digging Deeper into the :canned_food:
 
 ### Hardware Principles
 
