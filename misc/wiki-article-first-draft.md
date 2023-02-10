@@ -45,7 +45,7 @@ This significantly reduces the wires needed to connect the network, and is why i
 
 We can break down a node into three parts:
 1. Microprocessor
-    Hello
+   <p>Hello</p>
 2. CAN controller
 3. Transceiver
 
