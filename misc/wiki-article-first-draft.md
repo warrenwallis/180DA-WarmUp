@@ -47,5 +47,8 @@ This significantly reduces the wires needed to connect the network, and is why i
 
 ## Links
 
-[[1: Wikipedia](https://en.m.wikipedia.org/wiki/CAN_bus) https://en.m.wikipedia.org/wiki/CAN_bus]
-
+1. [Wikipedia](https://en.m.wikipedia.org/wiki/CAN_bus)
+2. [CopperHillTech](https://copperhilltech.com/a-brief-introduction-to-controller-area-network/)
+3. [TexasInstruments-1](https://www.ti.com/lit/an/sloa101b/sloa101b.pdf?ts=1675960976305&ref_url=https%253A%252F%252Fwww.google.com%252F)
+4. [TexasInstruments-2](https://www.ti.com/lit/an/slyt560/slyt560.pdf?ts=1676009390287&ref_url=https%253A%252F%252Fwww.google.com%252F#:~:text=Still%2C%20Ethernet%20can%20transport%20data,provid%2D%20ing%20much%20more%20bandwidth)
+5. [Adafruit](https://learn.adafruit.com/adafruit-feather-m4-can-express)
