@@ -53,14 +53,48 @@ We can break down a node into three parts:
    </p>
 2. CAN controller
    <p>
-      The controller is responsible for receiving and storing messages until a full message frame is received to process. It is also responsible for the actual transmission of the node's message on the bus.
+      The controller is responsible for receiving and storing messages until a full message frame is received to process.
    </p>
 4. Transceiver
-
+   <p>
+      The tranceiver converts the data from the bus to a format that the CAN controller can understand. It also converts the message from the controller to a format the bus accepts.
+   </p>
 
 ### Software Principles
 
+*Well that's cool and all, but how CAN I use this!?* I gotchu!
+
+There are many abstractions and API's created for the user to be able to use the CAN protocol. In my job, I am able to use CAN on python, C++, and C to interact and send signals to the elevator system.
+
+Really, all we need to focus on as users are:
+1. Message ID's
+   <p>
+      There exists two different standards for the protocol: Standard CAN and Extended CAN.
+   
+      Standard CAN has a message ID of 11 bits, therefore, we can have 2<sup>11</sup> or 2048 different identifiers from 0 to 2047 [[3](https://github.com/warrenwallis/180DA-WarmUp/edit/main/misc/wiki-article-first-draft.md#links)].
+      Extended CAN has a message ID of 29 bits, therefore, we can have 2<sup>29</sup> or 536(ish) million identifiers from 0 to 536870911 [[3](https://github.com/warrenwallis/180DA-WarmUp/edit/main/misc/wiki-article-first-draft.md#links)].
+   
+      Pretty crazy huh? And as programmers we can even design how we want to use these messages. Do we potentially want 536 million different nodes? Do we want to have 536 million different types of messages we can send? The skies the limit or really 2<sup>29</sup>, but you get what I mean.
+   </p>
+3. The actual message
+   <p>
+      Regardless of whether you choose standard or extended, the protocol still give us 8 bytes to send our message in.
+      
+      And again, as programmers we have the ability to design how we want to encode our data:
+      <ol>
+         <li>we can use one-hot encoding where only one of the 64 bits (8 bytes * 8 bits/byte) are set to a high</li>
+         <li>we can use the whole range of the 64 bits with either binary or hexadecimal</li>
+         <li>we can even send strings as longs as we bound it to 8 characters since a character will take up 1 byte each</li>
+      </ol>
+   </p>
+5. What speed we want to send things through the bus
+
+
+
+
 ## Sealing this CAN Post
+
+I would say that we only need to understand the basics of the hardware in the protocol. Unless we are trying to recreate or make a better protocol, too much in-depth to the topic is not helpful. In order to understand the walkthrough below, the above hardware section and the software selection are all you need!
 
 ## Links
 
