@@ -37,17 +37,25 @@ Similar technologies to CAN:
 
 As mentioned earlier, a network using CAN only needs two wires to operate:
 
-*insert image here*
+<img width="1440" alt="image" src="https://user-images.githubusercontent.com/66290894/218182132-b87afaed-96fc-472a-818d-404dfaf79e87.png">
 
 This significantly reduces the wires needed to connect the network, and is why it was and still is popular in the automobile industry. The motivation behind the CAN protocol was to reduce costs by reducing the use of copper wire:
 
-*insert image here*
+![image](https://user-images.githubusercontent.com/66290894/218182038-5c71639b-a748-4b06-8a9f-f547c59a5874.png)
 
 We can break down a node into three parts:
+
+<img width="770" alt="image" src="https://user-images.githubusercontent.com/66290894/218181390-546e2749-774b-40f2-89ee-fbb928902026.png">
+
 1. Microprocessor
-   <p>Hello</p>
+   <p>
+      The microprocessor is responsible for decoding messages received and decides what messages to transmit.
+   </p>
 2. CAN controller
-3. Transceiver
+   <p>
+      The controller is responsible for receiving and storing messages until a full message frame is received to process. It is also responsible for the actual transmission of the node's message on the bus.
+   </p>
+4. Transceiver
 
 
 ### Software Principles
