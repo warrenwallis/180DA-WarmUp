@@ -72,7 +72,7 @@ Really, all we need to focus on as users are:
    <p>
       There exists two different standards for the protocol: Standard CAN and Extended CAN.
    
-      Standard CAN has a message ID of 11 bits, therefore, we can have 2<sup>11</sup> or 2048 different identifiers from 0 to 2047 [[3](https://github.com/warrenwallis/180DA-WarmUp/edit/main/misc/wiki-article-first-draft.md#links)].
+      Standard CAN has a message ID of 11 bits, therefore, we can have 2<sup>11</sup> or 2048 different identifiers from 0 to 2047.
       Extended CAN has a message ID of 29 bits, therefore, we can have 2<sup>29</sup> or 536(ish) million identifiers from 0 to 536870911 [[3](https://github.com/warrenwallis/180DA-WarmUp/edit/main/misc/wiki-article-first-draft.md#links)].
    
       Pretty crazy huh? And as programmers we can even design how we want to use these messages. Do we potentially want 536 million different nodes? Do we want to have 536 million different types of messages we can send? The skies the limit or really 2<sup>29</sup>, but you get what I mean.
