@@ -49,16 +49,17 @@ We can break down a node into three parts:
 
 1. Microprocessor
    <p>
-      The microprocessor is responsible for decoding messages received and decides what messages to transmit. [[1](https://github.com/warrenwallis/180DA-WarmUp/edit/main/misc/wiki-article-first-draft.md#links)]
+      The microprocessor is responsible for decoding messages received and decides what messages to transmit.
    </p>
 2. CAN controller
    <p>
-      The controller is responsible for receiving and storing messages until a full message frame is received to process. [[1](https://github.com/warrenwallis/180DA-WarmUp/edit/main/misc/wiki-article-first-draft.md#links)]
+      The controller is responsible for receiving and storing messages until a full message frame is received to process.
    </p>
 4. Transceiver
    <p>
-      The tranceiver converts the data from the bus to a format that the CAN controller can understand. It also converts the message from the controller to a format the bus accepts. [[1](https://github.com/warrenwallis/180DA-WarmUp/edit/main/misc/wiki-article-first-draft.md#links)]
+      The tranceiver converts the data from the bus to a format that the CAN controller can understand. It also converts the message from the controller to a format the bus accepts. 
    </p>
+[[1](https://github.com/warrenwallis/180DA-WarmUp/edit/main/misc/wiki-article-first-draft.md#links)]
 
 ### Software Principles
 
