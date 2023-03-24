@@ -41,7 +41,7 @@ void loop() {
         CAN.endPacket();
 
         play = true;
-        Serial.println("Go!")
+        Serial.println("Go!");
     }
 
     
