@@ -41,10 +41,11 @@ void loop() {
                     payload = CAN.read();
                 }
 
-                if (payload == 1) {
+                if (payload) {
                     strip.setPixelColor(0, strip.Color(255, 0, 0)); // set LED to red
                     strip.show();
-                    Serial.println("Player 1 Wins!");
+                    Serial.print("Winner - Player ");
+                    Serial.println(payload);
                 }
 
                 play = false;

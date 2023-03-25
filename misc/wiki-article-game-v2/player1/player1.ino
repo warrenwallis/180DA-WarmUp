@@ -41,10 +41,11 @@ void loop() {
                     payload = CAN.read();
                 }
 
-                if (payload == 2) {
+                if (payload) {
                     strip.setPixelColor(0, strip.Color(255, 0, 0)); // set LED to red
                     strip.show();
-                    Serial.println("Player 2 Wins!");
+                    Serial.print("Winner - Player ");
+                    Serial.println(payload);
                 }
 
                 play = false;
@@ -63,16 +64,17 @@ void loop() {
     }
     else { // player's are not available to play yet
         Serial.println("Get Ready!");
-        for (int i = 0; i < WAIT_TIME; i++) {
+        for (int i = 0; i < WAIT_TIME; i++) { // flash yellow sequence to alert players that game is about to begin
             if (i % 2)
                 strip.setPixelColor(0, strip.Color(255, 255, 0)); // set LED to yellow for standby
             else
-                strip.setPixelColor(0, strip.Color(0, 0, 0)); // set LED to off for flashing sequence
+                strip.setPixelColor(0, strip.Color(0, 0, 0));
 
             strip.show();
             delay(500);
         }
 
+        // send begin to other nodes
         CAN.beginPacket(HOST_ID);
         CAN.write(MESSAGE);
         CAN.endPacket();
