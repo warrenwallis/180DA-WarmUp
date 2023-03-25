@@ -9,22 +9,18 @@ const int WAIT_TIME = 3;
 const int GPIO_INPUT = 0;
 bool play = false;
 
-Adafruit_Neopixel strip(1, PIN_NEOPIXEL, NEO_GRB + NEO_KHZ800);
+Adafruit_NeoPixel strip(1, PIN_NEOPIXEL, NEO_GRB + NEO_KHZ800);
 
 void setup() {
-    Serial.Begin(9600);
+    Serial.begin(9600);
 
     strip.begin();
     strip.setBrightness(50);
 
-    pinMode(PIN_CAN_STANDBY, OUTPUT);
-    digitalWrite(PIN_CAN_STANDBY, false);
-    pinMode(PIN_CAN_BOOSTEN, OUTPUT);
-    digitalWrite(PIN_CAN_BOOSTEN, true);
     pinMode(GPIO_INPUT, INPUT);
 
     if (!CAN.begin(CAN_BPS)) {
-        Serial.prinln("Starting CAN failed");
+        Serial.println("Starting CAN failed");
         while (true);
     }
 }

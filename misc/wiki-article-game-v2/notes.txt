@@ -2,3 +2,10 @@ Each player node contains the same message ID
     the message is what is different
 
 host sends message to monitor saying GO and sends messages to player nodes allowing them to player
+
+
+
+
+STEPS
+need to install CAN library following this link: https://learn.adafruit.com/adafruit-feather-m4-can-express/arduino-can-examples
+need to install neoPixel from Arduino library following the steps in this link: https://github.com/adafruit/Adafruit_NeoPixel

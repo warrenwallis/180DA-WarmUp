@@ -9,22 +9,18 @@ const int WAIT_TIME = 3;
 const int GPIO_INPUT = 0;
 bool play = false;
 
-Adafruit_Neopixel strip(1, PIN_NEOPIXEL, NEO_GRB + NEO_KHZ800);
+Adafruit_NeoPixel strip(1, PIN_NEOPIXEL, NEO_GRB + NEO_KHZ800);
 
 void setup() {
-    Serial.Begin(9600);
+    Serial.begin(9600);
 
     strip.begin();
     strip.setBrightness(50);
 
-    pinMode(PIN_CAN_STANDBY, OUTPUT);
-    digitalWrite(PIN_CAN_STANDBY, false);
-    pinMode(PIN_CAN_BOOSTEN, OUTPUT);
-    digitalWrite(PIN_CAN_BOOSTEN, true);
     pinMode(GPIO_INPUT, INPUT);
 
     if (!CAN.begin(CAN_BPS)) {
-        Serial.prinln("Starting CAN failed");
+        Serial.println("Starting CAN failed");
         while (true);
     }
 }
@@ -33,7 +29,7 @@ void loop() {
     if (play) {
         if (digitalRead(GPIO_INPUT)) {
             CAN.beginPacket(PLAYERS_ID);
-            CAN.Write(MESSAGE);
+            CAN.write(MESSAGE);
             CAN.endPacket();
         }
 
@@ -55,18 +51,18 @@ void loop() {
                 delay(3000);
 
                 CAN.beginPacket(HOST_ID);
-                CAN.Write(MESSAGE);
+                CAN.write(MESSAGE);
                 CAN.endPacket();
             }
-            if (CAN.packetID() == HOST_ID) {
+            if (CAN.packetId() == HOST_ID) {
                 strip.setPixelColor(0, strip.Color(0, 0, 0)); // set LED to off
-                strip.show()
+                strip.show();
                 play = false;
             }
         }
     }
     else { // player's are not available to play yet
-        Serial.println("Get Ready!")
+        Serial.println("Get Ready!");
         for (int i = 0; i < WAIT_TIME; i++) {
             if (i % 2)
                 strip.setPixelColor(0, strip.Color(255, 255, 0)); // set LED to yellow for standby
@@ -78,7 +74,7 @@ void loop() {
         }
 
         CAN.beginPacket(HOST_ID);
-        CAN.Write(MESSAGE);
+        CAN.write(MESSAGE);
         CAN.endPacket();
 
         play = true;
