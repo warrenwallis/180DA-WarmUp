@@ -1,0 +1,4 @@
+Each player node contains the same message ID
+    the message is what is different
+
+host sends message to monitor saying GO and sends messages to player nodes allowing them to player
